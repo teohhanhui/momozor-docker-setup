@@ -15,5 +15,5 @@ RUN sbcl --non-interactive --load install.lisp
 WORKDIR /root/quicklisp/local-projects
 
 RUN git clone https://github.com/momozor/FCC-timestamp-microservice timestamp-microservice
-CMD cd timestamp-microservice; sbcl --load app.lisp --eval '(ql:quickload :timestamp-microservice)' --eval '(timestamp-microservice:start :port (uiop:getenv "PORT")'
+CMD cd timestamp-microservice; sbcl --load app.lisp --eval '(ql:quickload :timestamp-microservice)' --eval '(timestamp-microservice:start :port (uiop:getenv "PORT"))'
 
